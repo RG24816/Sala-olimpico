@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"><img src="https://us.123rf.com/450wm/garagestock/garagestock1901/garagestock190100462/116212512-conjunto-de-iconos-de-l%C3%ADnea-de-hospital.jpg?ver=6" alt=""></a></div>
+            <div class="auth">
+                <a href="login.html" class="button">Login</a>
+                <a href="register.html" class="button">Registro</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="titulo">
+            <h1>Adultos</h1>
+        </div>
+        <div class="sala">
+            <div class="paciente">
+                <h2>Paciente 1</h2>
+                <div class="info">
+                    <p><strong>Nombre:</strong> Juan</p>
+                    <p><strong>Apellido:</strong> Pérez</p>
+                    <p><strong>DNI:</strong> 12345678A</p>
+                    <p><strong>Enfermero Asignado:</strong> María</p>
+                </div>
+            </div>
+            
+            <div class="paciente">
+                <h2>Paciente 2</h2>
+                <div class="info">
+                    <p><strong>Nombre:</strong> Ana</p>
+                    <p><strong>Apellido:</strong> Sánchez</p>
+                    <p><strong>DNI:</strong> 98765432B</p>
+                    <p><strong>Enfermero Asignado:</strong> Carlos</p>
+                </div>
+            </div>
+            
+            <div class="paciente">
+                <h2>Paciente 3</h2>
+                <div class="info">
+                    <p><strong>Nombre:</strong> Laura</p>
+                    <p><strong>Apellido:</strong> García</p>
+                    <p><strong>DNI:</strong> 45678901C</p>
+                    <p><strong>Enfermero Asignado:</strong> Pedro</p>
+                </div>
+            </div>
+            
+            <div class="paciente">
+                <h2>Paciente 4</h2>
+                <div class="info">
+                    <!-- Datos del paciente 4 -->
+                </div>
+            </div>
+            
+            <div class="paciente">
+                <h2>Paciente 5</h2>
+                <div class="info">
+                    <!-- Datos del paciente 5 -->
+                </div>
+            </div>
+
+            <div class="paciente">
+                <h2>Paciente 6</h2>
+                <div class="info">
+                    <!-- Datos del paciente 6 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="boton-container">
+            <button id="mostrarFormulario" class="boton-azul">Código Azul</button>
+        </div>
+        <div id="formulario" class="formulario">
+            <button id="cerrarFormulario" class="cerrar">Cerrar</button>
+            <form class="formulario_botons">
+                <label for="sala">Sala:</label>
+                <select id="sala" name="sala">
+                    <option value="s1">S1</option>
+                    <option value="s2">S2</option>
+                    <option value="s3">S3</option>
+                </select>
+                <br>
+                <label for="motivo">Motivo:</label>
+                <select id="motivo" name="motivo">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
