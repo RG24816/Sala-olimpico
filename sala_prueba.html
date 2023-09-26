@@ -19,100 +19,39 @@
     </header>
 
     <main>
-        <div class="titulo">
-            <h1>Pediatria</h1>
-        </div>
-        <div class="sala">
-            <div class="paciente">
-                <h2>Paciente 1</h2>
-                <div class="info">
-                    <p><strong>Nombre:</strong> Juan</p>
-                    <p><strong>Apellido:</strong> Pérez</p>
-                    <p><strong>DNI:</strong> 12345678A</p>
-                    <p><strong>Enfermero Asignado:</strong> María</p>
-                    <p><strong>Ficha Medica:</strong></p>
-                    <p><strong>Ubicacion:</strong> A </p>
+        <h1>Formulario de Pacientes</h1>
+    <form id="patientForm">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" required>
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
 
-                </div>
-            </div>
-            
-            <div class="paciente">
-                <h2>Paciente 2</h2>
-                <div class="info">
-                    <p><strong>Nombre:</strong> Ana</p>
-                    <p><strong>Apellido:</strong> Sánchez</p>
-                    <p><strong>DNI:</strong> 98765432B</p>
-                    <p><strong>Enfermero Asignado:</strong> Carlos</p>
-                    <p><strong>Ficha Medica:</strong></p>
-                    <p><strong>Ubicacion:</strong> A </p>
-                    <p><strong>Telefono:</strong> A </p>
-                    <p><strong>:</strong> A </p>
-                </div>
-            </div>
-            
-            <div class="paciente">
-                <h2>Paciente 3</h2>
-                <div class="info">
-                    <p><strong>Nombre:</strong> Laura</p>
-                    <p><strong>Apellido:</strong> García</p>
-                    <p><strong>DNI:</strong> 45678901C</p>
-                    <p><strong>Enfermero Asignado:</strong> Pedro</p>
-                    <p><strong>Ficha Medica:</strong></p>
-                    <p><strong>Ubicacion:</strong> A </p>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required>
 
-                </div>
-            </div>
-            
-            <div class="paciente">
-                <h2>Paciente 4</h2>
-                <div class="info">
-                    <!-- Datos del paciente 4 -->
-                </div>
-            </div>
-            
-            <div class="paciente">
-                <h2>Paciente 5</h2>
-                <div class="info">
-                    <!-- Datos del paciente 5 -->
-                </div>
-            </div>
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" required>
 
-            <div class="paciente">
-                <h2>Paciente 6</h2>
-                <div class="info">
-                    <!-- Datos del paciente 6 -->
-                </div>
-            </div>
+        <label for="fichaMedica">Ficha Médica:</label>
+        <textarea id="fichaMedica" rows="4" required></textarea>
 
-            <div class="paciente">
-                <h2>Paciente 6</h2>
-                <div class="info">
-                    <!-- Datos del paciente 6 -->
-                </div>
-            </div>
+        <label for="enfermero">Enfermero Asignado:</label>
+        <input type="text" id="enfermero" required>
 
-        </div>
+        <button type="submit">Guardar Paciente</button>
+    </form>
 
-        <button id="mostrarFormulario" class="boton-azul">Código Azul</button>
-            <div id="formulario" class="formulario">
-                <form>
-                    <label for="sala">Sala:</label>
-                        <select id="sala" name="sala">
-                            <option value="s1">S1</option>
-                            <option value="s2">S2</option>
-                            <option value="s3">S3</option>
-                        </select>
-            <br>
-                    <label for="motivo">Motivo:</label>
-                        <select id="motivo" name="motivo">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
+    <h2>Lista de Pacientes</h2>
+    <ul id="patientList">
+        <!-- Aquí se mostrarán los pacientes -->
+    </ul>
+
+    <button id="clearButton">Borrar Todos los Pacientes</button>
+
     </main>
+
+    
     <script src="script.js"></script>
 </body>
 </html>
