@@ -56,6 +56,7 @@ nav {
     align-items: center;
     height: 85vh;
     background-color: #fff; 
+    margin-top: 10%;
 }
 
 .login-container {
@@ -246,12 +247,7 @@ label, select {
     cursor: pointer;
 }
 
-path:hover{
-    transition: 5s;
-    cursor: pointer;
-    stroke: red;
-    color: red;
-}
+
 
 /* Estilos para notebooks (entre 768px y 991px) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
