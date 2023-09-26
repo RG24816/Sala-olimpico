@@ -10,7 +10,7 @@
     
     <header>
         <nav>
-            <div class="logo"><a href="index.html"><img src="https://us.123rf.com/450wm/garagestock/garagestock1901/garagestock190100462/116212512-conjunto-de-iconos-de-l%C3%ADnea-de-hospital.jpg?ver=6" alt=""></a></div>
+            <div class="logo"><a href="index.html">Hospital</a></div>
             <div class="auth">
                 <a href="login.html" class="button">Login</a>
                 <a href="register.html" class="button">Registro</a>
@@ -75,27 +75,32 @@
             </div>
         </div>
 
-        <button id="mostrarFormulario" class="boton-azul">Código Azul</button>
+        <div class="boton-container">
+            <button id="mostrarFormulario" class="boton-azul">Código Azul</button>
+        </div>
             <div id="formulario" class="formulario">
                 <button id="cerrarFormulario" class="cerrar">Cerrar</button>
-                <form class="formulario_botons">
+                <form class="form_codigo_azul">
                     <label for="sala">Sala:</label>
-                        <select id="sala" name="sala">
-                            <option value="s1">S1</option>
-                            <option value="s2">S2</option>
-                            <option value="s3">S3</option>
-                        </select>
-            <br>
+                    <select id="sala" name="sala">
+                        <option value="s1">S1</option>
+                        <option value="s2">S2</option>
+                        <option value="s3">S3</option>
+                    </select>
+                    <br>
                     <label for="motivo">Motivo:</label>
-                        <select id="motivo" name="motivo">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-            <br>
-            <button type="submit">Enviar</button>
+                    <select id="motivo" name="motivo">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </form>
+        <script src="script.js"></script>
     </main>
-    <script src="script.js"></script>
+
 </body>
 </html>

@@ -20,37 +20,3 @@ document.querySelector("form").addEventListener("submit", function(e) {
     // Cerrar el formulario
     document.getElementById("formulario").style.display = "none";
 });
-
-/* */
-
-document.addEventListener("DOMContentLoaded", function () {
-    const patientForm = document.getElementById("patientForm");
-    const patientList = document.getElementById("patientList");
-    const clearButton = document.getElementById("clearButton");
-
-    patientForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const dni = document.getElementById("dni").value;
-        const nombre = document.getElementById("nombre").value;
-        const edad = document.getElementById("edad").value;
-        const ubicacion = document.getElementById("ubicacion").value;
-        const fichaMedica = document.getElementById("fichaMedica").value;
-        const enfermero = document.getElementById("enfermero").value;
-
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `<strong>DNI:</strong> ${dni}, <strong>Nombre:</strong> ${nombre}, <strong>Edad:</strong> ${edad}, <strong>Ubicación:</strong> ${ubicacion}, <strong>Ficha Médica:</strong> ${fichaMedica}, <strong>Enfermero Asignado:</strong> ${enfermero} <button class="deleteButton">Borrar</button>`;
-        
-        const deleteButton = listItem.querySelector(".deleteButton");
-        deleteButton.addEventListener("click", function () {
-            listItem.remove();
-        });
-
-        patientList.appendChild(listItem);
-        patientForm.reset();
-    });
-
-    clearButton.addEventListener("click", function () {
-        patientList.innerHTML = "";
-    });
-});
