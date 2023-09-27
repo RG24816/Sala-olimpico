@@ -37,7 +37,7 @@ function getCookie(name) {
 if (rol === 'administrador') {
   // Aquí agregas código específico para administradores
   console.log('Usuario administrador');
-} else if (rol === 'usuario_generico') {
+} else if (rol === 'usuario') {
   // Aquí agregas código específico para usuarios genéricos
   console.log('Usuario genérico');
 } else {
