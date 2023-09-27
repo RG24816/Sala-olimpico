@@ -18,7 +18,29 @@ formularioRegistro.addEventListener('submit', function (event) {
     }
 
     // Realiza una solicitud al servidor para registrar al usuario
-    registrarUsuario(nombre, email, contrasena);
+    registrarUsuario(email, nombre, contrasena);
 });
 
-// Resto del código para registrar al usuario (similar al ejemplo anterior)
+function registrarUsuario(email, nombre, contrasena) {
+    // Realiza una solicitud POST al servidor para registrar al usuario
+    fetch('/registrar-usuario', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, nombre, contrasena }), // Envía los datos al servidor en formato JSON
+    })
+        .then(response => response.json())
+        .then(data => {
+            // Muestra un mensaje al usuario
+            alert(data.mensaje);
+            // Cuando el registro es exitoso, redirige al usuario a la página de inicio de sesión
+            if (data.mensaje === 'Registro exitoso.') {
+                window.location.href = '/login.html'; // Cambia la ruta según tus necesidades
+            }
+        })
+        .catch(error => {
+            console.error('Error al registrar usuario:', error);
+            alert('Ocurrió un error al registrar usuario.');
+        });
+}

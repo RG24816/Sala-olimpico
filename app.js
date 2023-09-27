@@ -33,6 +33,13 @@ app.get('/script-in-sesion.js', (req, res) => {
       }
     });
   });
+  app.get('/registro.js', (req, res) => {
+    res.sendFile(__dirname + '/registro.js', {
+      headers: {
+        'Content-Type': 'text/javascript'
+      }
+    });
+  });
 
   app.get("/index.html", (req, res) => {
     res.sendFile(__dirname + '/index.html');
@@ -41,8 +48,8 @@ app.get("/adultos.html", (req, res) => {
     res.sendFile(__dirname + '/adultos.html');
   });
 
-  app.get("pediatria.html", (req, res) => {
-    res.sendFile(__dirname + 'pediatria.html');
+  app.get("/pediatria.html", (req, res) => {
+    res.sendFile(__dirname + '/pediatria.html');
   });
   app.get("/sala_prueba.html", (req, res) => {
     res.sendFile(__dirname + '/sala_prueba.html');
@@ -81,16 +88,16 @@ app.post('/validar-inicio-sesion', (req, res) => {
   });
 // Ruta para registrar un usuario en la base de datos
 app.post('/registrar-usuario', (req, res) => {
-  const { email, nombre, contrasena } = req.body; // Obtén los datos del cuerpo de la solicitud
+  const { email, nombre, contrasena } = req.body;
 
   // Realiza una consulta para insertar al nuevo usuario en la base de datos
-  pool.query('INSERT INTO usuarios (email, nombre, contrasena) VALUES ($3, $2, $4)', [email, nombre, contrasena], (error, result) => {
-      if (error) {
-          console.error('Error al registrar el usuario:', error);
-          res.status(500).json({ mensaje: 'Ocurrió un error al registrar el usuario.' });
-      } else {
-          res.json({ mensaje: 'Usuario registrado exitosamente.' });
-      }
+  pool.query('INSERT INTO usuarios (nombre, correo, contraseña) VALUES ($1, $2, $3)', [nombre, email, contrasena], (error, result) => {
+    if (error) {
+      console.error('Error al registrar el usuario:', error);
+      res.status(500).json({ mensaje: 'Ocurrió un error al registrar el usuario.' });
+    } else {
+      res.json({ mensaje: 'Registro exitoso.' });
+    }
   });
 });
 
