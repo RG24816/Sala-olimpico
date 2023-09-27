@@ -325,4 +325,12 @@ label, select {
 }
 body{
     font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+#ilogo{
+    width: 30%;
+    height: 30%;
+}
+main{
+    margin-top: 0;
 }
