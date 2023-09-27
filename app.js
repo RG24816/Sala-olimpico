@@ -9,7 +9,7 @@ const pool = new pg.Pool({
   password: 'gxdfrf',
   host: 'localhost',
   database: 'postgres',
-  port: 5433,
+  port: 5432,
 });
 
 const app = express();
