@@ -20,3 +20,14 @@ document.querySelector("form").addEventListener("submit", function(e) {
     // Cerrar el formulario
     document.getElementById("formulario").style.display = "none";
 });
+function cerrarSesion() {
+    // Aquí puedes realizar las acciones necesarias para cerrar la sesión,
+    // como eliminar cookies o limpiar datos de autenticación en el servidor.
+    // En este ejemplo, simplemente redirigiremos a una página de inicio de sesión.
+    window.location.href = 'login.html';
+}
+
+// Agregar un manejador de eventos al botón "Cerrar sesión"
+document.getElementById('cerrarSesion').addEventListener('click', function() {
+    cerrarSesion();
+});

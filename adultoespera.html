@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Datos del Paciente</title>
 </head>
+<header>
+    <nav>
+     <div class="logo"><a href="index.html"> <img src="img/Captura_de_pantalla_2023-09-15_161018-transformed.png" alt="logo" id="ilogo"></a></div>
+        <div class="auth">
+            <a href="cuenta.html" class="button">Cuenta</a>
+            <a href=""></a>
+        </div>
+     
+    </nav>
+</header>
 <body>
-    
+    <div class="container">
+        <h2>Datos personales del paciente</h2>
+        <form action="adultos.html" >
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="genero">Genero:</label>
+                <select id="ubicacionActual" name="ubicacionActual">
+                    <option value="area1">Masculino</option>
+                    <option value="area2">Femenino</option>
+                   
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div class="form-group">
+                <label for="contacto">Número de contacto:</label>
+                <input type="text" id="contacto" name="contacto" required>
+            </div>
+            <div class="form-group">
+                <label for="otrosDatos">Otros datos personales relevantes:</label>
+                <textarea id="otrosDatos" name="otrosDatos" rows="4"></textarea>
+            </div>
+            
+            <h2>Datos médicos significativos</h2>
+            <div class="form-group">
+                <label for="alergias">Alergias:</label>
+                <textarea id="alergias" name="alergias" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="condicionesMedicas">Condiciones médicas previas:</label>
+                <textarea id="condicionesMedicas" name="condicionesMedicas" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="historialEnfermedades">Historial de enfermedades:</label>
+                <textarea id="historialEnfermedades" name="historialEnfermedades" rows="4"></textarea>
+            </div>
+            
+            <h2>Ubicación del paciente</h2>
+            <div class="form-group">
+                <label for="ubicacionActual">Área o zona actual:</label>
+                <select id="ubicacionActual" name="ubicacionActual">
+                    <option value="area1">Pediatría</option>
+                    <option value="area2">Adultos</option>
+                    <option value="area3">Hospitalización</option>
+                    <option value="area4">Cirugía</option>
+                    <option value="area5">Nutricion</option>
+                </select>
+            </div>
+            
+            <h2>Enfermero asignado</h2>
+            <div class="form-group">
+                <label for="idEnfermero">ID del enfermero asignado:</label>
+                <select id="idEnfermero" name="idEnfermero">
+                    <option value="1">Enfermero 1</option>
+                    <option value="2">Enfermero 2</option>
+                    <option value="3">Enfermero 3</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
