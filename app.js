@@ -70,7 +70,7 @@ app.get('/script.js', (req, res) => {
 app.post('/validar-inicio-sesion', (req, res) => {
     const { usuario, contrasena } = req.body;
   
-    pool.query('SELECT * FROM usuarios2 WHERE dni = $1 AND contraseña = $2', [usuario, contrasena], (error, result) => {
+    pool.query('SELECT * FROM usuarios WHERE correo = $1 AND contraseña = $2', [usuario, contrasena], (error, result) => {
       if (error) {
         console.error('Error al consultar la base de datos:', error);
         res.status(500).json({ error: 'Ocurrió un error al verificar las credenciales.' });
@@ -88,7 +88,7 @@ app.post('/validar-inicio-sesion', (req, res) => {
   });
 // Ruta para registrar un usuario en la base de datos
 app.post('/registrar-usuario', (req, res) => {
-  const { email, nombre, contrasena } = req.body;
+  const {nombre, email, contrasena} = req.body;
 
   // Realiza una consulta para insertar al nuevo usuario en la base de datos
   pool.query('INSERT INTO usuarios (nombre, correo, contraseña) VALUES ($1, $2, $3)', [nombre, email, contrasena], (error, result) => {

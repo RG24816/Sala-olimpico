@@ -36,7 +36,7 @@ function registrarUsuario(email, nombre, contrasena) {
             alert(data.mensaje);
             // Cuando el registro es exitoso, redirige al usuario a la página de inicio de sesión
             if (data.mensaje === 'Registro exitoso.') {
-                window.location.href = '/login.html'; // Cambia la ruta según tus necesidades
+                window.location.href = '/'; // Cambia la ruta según tus necesidades
             }
         })
         .catch(error => {
