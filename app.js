@@ -47,12 +47,15 @@ app.get('/script-in-sesion.js', (req, res) => {
 app.get("/adultos.html", (req, res) => {
     res.sendFile(__dirname + '/adultos.html');
   });
+  app.get("/adultosespera.html", (req, res) => {
+    res.sendFile(__dirname + '/adultosespera.html');
+  });
 
   app.get("/pediatria.html", (req, res) => {
     res.sendFile(__dirname + '/pediatria.html');
   });
-  app.get("/sala_prueba.html", (req, res) => {
-    res.sendFile(__dirname + '/sala_prueba.html');
+  app.get("/pediatriaespera.html", (req, res) => {
+    res.sendFile(__dirname + '/pediatriaespera.html');
   });
 
 app.get("/style.css", (req, res) => {
